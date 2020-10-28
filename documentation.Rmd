@@ -1,0 +1,60 @@
+---
+title: "Mystery Novel Project"
+author: "April Zhao"
+date: "10/27/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting the Data
+The data for this project is downloaded from Project Gutenberg, with three works from each author:
+**Edgar Allan Poe**
+
+1. `masque`: The Masque of the Red Death
+2. `cask`: The Cask of Amontillado
+3. `usher`: The Fall of the House of Usher
+
+**Aurthur Conan Doyle**
+
+4. `hound`: The Hound of the Baskervilles
+5. `signfour`: The Sign of the Four
+6. `scarlet`: A Study in Scarlet
+
+**Agatha Christie**
+7. `links`: The Murder on the Links
+8. `adversary`: The Secret Adversary
+9. `styles`: The Mysterious Affair at Styles
+
+
+```{r txt}
+url1 <- "https://www.gutenberg.org/files/1064/1064-0.txt"
+url2 <- "http://www.gutenberg.org/cache/epub/1063/pg1063.txt"
+url3 <- "http://www.gutenberg.org/cache/epub/932/pg932.txt"
+
+url4 <- "https://www.gutenberg.org/files/2852/2852-0.txt"
+url5 <- "https://www.gutenberg.org/files/2097/2097-0.txt"
+url6 <- "https://www.gutenberg.org/files/244/244-0.txt"
+
+url7 <- "https://www.gutenberg.org/files/58866/58866-0.txt"
+url8 <- "https://www.gutenberg.org/files/1155/1155-0.txt"
+url9 <- "http://www.gutenberg.org/files/863/863-0.txt"
+
+download.file(url1, "./text/masque.txt")
+masque <- readLines("./text/masque.txt", encoding = "UTF-8")
+masque <- masque[31:237]
+
+download.file(url2, "./text/cask.txt")
+cask <- readLines("./text/cask.txt", encoding = "UTF-8")
+cask <- cask[33:362]
+
+download.file(url3, "./text/raven.txt")
+raven <- readLines("./text/raven.txt", encoding = "UTF-8")
+
+```
+
+
+
+
