@@ -54,7 +54,7 @@ download.file(url3, "./text/raven.txt")
 raven <- readLines("./text/raven.txt", encoding = "UTF-8")
 
 ```
-
+https://www.erikhoward.net/blog/how-to-create-an-r-data-package/
 
 
 
